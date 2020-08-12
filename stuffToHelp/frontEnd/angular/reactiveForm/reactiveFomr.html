@@ -1,0 +1,55 @@
+<div class="container border">
+  <div class="row">
+    <div class="col-lg-12">
+      <h5><strong>Ajouter les services</strong></h5>
+    </div>
+  </div>
+  <form [formGroup]="serviceForm">
+    <div formArrayName="services">
+      <div *ngFor="let employee of services().controls; let empIndex=index">
+        <div [formGroupName]="empIndex">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-12"><p class="some-padds">Nom du service: <span>*</span></p></div>
+                <div class="col-lg-11">
+                  <input type="text" formControlName="serviceName" placeholder="Service">
+                </div>
+
+                <div class="col-lg-1 nopadds">
+                  <i (click)="removeService(empIndex)" class="icons icon-trash"></i>
+                </div>
+              </div>
+              <div formArrayName="feature">
+                <p class="some-padds">Nom des fonctionalités: <span>*</span></p>
+                <div *ngFor="let skill of servicefeatures(empIndex).controls; let skillIndex=index">
+                  <div [formGroupName]="skillIndex" class="row">
+                    <div class="col-lg-11"><input type="text" formControlName="featureName"
+                                                  placeholder="Fonctionalité {{skillIndex+1}}"></div>
+                    <div class="col-lg-1 nopaddsremove"
+                         *ngIf="skillIndex != servicefeatures(empIndex).controls.length -1">
+                      <i (click)="removeserviceskill(empIndex,skillIndex)" class="icons icon-trash"></i>
+                    </div>
+                    <div class="col-lg-1 nopaddsremove"
+                         *ngIf="skillIndex == servicefeatures(empIndex).controls.length -1">
+                      <i (click)="addserviceskill(empIndex)" class="icons icon-add"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-12"><p class="some-padds">Description: <span>*</span></p></div>
+                <div class="col-lg-12"><textarea formControlName="serviceDescription"></textarea></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p class="add-new-service">
+    <button type="button" (click)="addService()">Ajouter une service</button>
+  </p>
+  {{this.serviceForm.value | json}}
