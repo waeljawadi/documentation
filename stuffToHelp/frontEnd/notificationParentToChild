@@ -1,0 +1,39 @@
+notify child from parent
+
+
+
+in childComponent.ts
+
+@Input() private uploadSuccess: EventEmitter<boolean>;
+Additionally in childComponent.ts subscribe to the event:
+
+ngOnInit() {
+  if (this.uploadSuccess) {
+    this.uploadSuccess.subscribe(data => {
+      // Do something in the childComponent after parent emits the event.
+    });
+  }
+}
+
+
+
+Parent Component
+In ParentComponent.html
+
+<app-gallery  [uploadSuccess] = "uploadSuccess" > </app-gallery>
+
+
+
+In ParentComponent.ts
+
+private uploadSuccess: EventEmitter<boolean> = new EventEmitter();
+
+onImageUploadSuccess(event) {
+   console.log('Image Upload succes');
+   if (event.code === 'OK' && this.maxUploadLimit > 0) {
+      this.galleryImagesCount = this.galleryImagesCount + 1;
+      this.maxUploadLimit = this.maxUploadLimit - 1;
+    }
+
+   // The parent emits the event which was given as `@Input` variable to the child-component
+   this.uploadSuccess.emit(true);
