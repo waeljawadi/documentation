@@ -1,0 +1,15 @@
+Define: 
+Une interface est un type abstrait qui est utilisé pour spécifier un comportement que les classes doivent implémenter. 
+Une interface fonctionelle est une interface qui contien une seule Methode abstrairte.
+
+1-An interface is a reference type in Java.
+2-It is similar to class.
+3-It is a collection of abstract methods.
+4-A class implements an interface, thereby inheriting the abstract methods of the interface.
+5-Interface attributes are by default public, static and final
+6-An interface cannot contain a constructor (as it cannot be used to create objects)
+--------
+Methods can be: static or default or abstract
+1- Static: as says there name they are static (they CAN'T be overriden when a class impliments rthe interface)
+2- Default: start with the key word defaul and they are also public, (they MAY be overriden when a class impliments rthe interface)
+3-Abstract: are by default public and have no body (they Must be implimented when interface is implimented by a  class)
