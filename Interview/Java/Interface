@@ -13,3 +13,45 @@ Methods can be: static or default or abstract
 1- Static: as says there name they are static (they CAN'T be overriden when a class impliments rthe interface)
 2- Default: start with the key word defaul and they are also public, (they MAY be overriden when a class impliments rthe interface)
 3-Abstract: are by default public and have no body (they Must be implimented when interface is implimented by a  class)
+
+------------- Interface/class extends interfaces-----case 1----
+interface a {
+abstract Number child();
+}
+interface b {
+    abstract Integer child();
+}
+-----> how o impliment them in interfce
+interface c extends a, b {
+  default Integer child() {
+      return 0;
+  }
+}
+----> the two abstract  methods got to have the same method signature + same return type , or one is subtype of other (unless code won't compile [not mandatory to implimenent]
+----> Must to impliment in the first super class
+
+------------- Interface/class extends interfaces-----case 2----
+interface c extends a, b {
+    @Override
+    default Integer child() {
+        return 1;
+    }
+}
+
+interface a {
+    default Number child() {
+    return 0;
+    }
+}
+
+interface b {
+    default Integer child() {
+        return 0;
+    }
+}
+
+----------> must be ovriden ( return type must much the narrower return type of the default method)
+
+// Static method can only be accessed via interface name
+// Default method method can only be accessed via class
+
