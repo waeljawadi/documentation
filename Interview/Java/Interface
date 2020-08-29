@@ -55,3 +55,4 @@ interface b {
 // Static method can only be accessed via interface name
 // Default method method can only be accessed via class or via concrete interface ( new instance of interface) like follows: new a() {}.child();
 // sub interface can refer to super interface via "subInterface.super.methodeName()" | this rule dosen't include static
+// variable are accessible via interface name / can't be accessed via the keyword super
