@@ -53,5 +53,5 @@ interface b {
 ----------> must be ovriden ( return type must much the narrower return type of the default method)
 
 // Static method can only be accessed via interface name
-// Default method method can only be accessed via class
+// Default method method can only be accessed via class or via concrete interface ( new instance of interface) like follows: new a() {}.child();
 
