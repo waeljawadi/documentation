@@ -1,1 +1,5 @@
-
+object can be referred via: 
+1- it's own type
+2- its super class
+3- implimented interface
+Reference type must be the same or encloses object type 
