@@ -1,0 +1,46 @@
+
+1- All Java classes are part of a package. A Java class can be explicitly defined in a namedpackage; otherwise, it becomes part of a default package
+
+2-the package statement must appear exactly once in a class.
+
+3- Type of comments :
+Multiline comments /* --------*/
+End-of-line comment //
+Javadoc comments /* */ -----> special comments and processed by Javadoc
+
+-----------
+
+-------Main method----
+The method must be marked as a public method.
+■The method must be marked as a static method.
+■The name of the method must be main.
+■The return type of this method must be void.
+■The  method  must  accept  a  method  argument  of  a String  array  or  a  variableargument (varargs) of type String.
+
+In main method -----> both public static and static public are the valid order
+
+For the exam, it’s important to note that you can’t use the import statement to accessmultiple classes or interfaces with the same names from different packages
+
+---------------
+A  top-level  class  is  a  class  that  isn’t  defined  within  any  other  class can't be protected or private
+-------------------
+
+Public access modifier are accessible across all packages
+
+
+The members of a class defined using the protected access modifier are accessible to
+■Classes and interfaces defined in the same package
+■All derived classes, even if they’re defined in separate packages
+
+
+
+
+------- Page 56----------------
+If class StoryBook tries to instantiate Book using a reference variable and then tries to access its pro-
+tected variable author and method modifyTemplate() , it won’t compilefazet yghaltouA derived class can inherit and access protected members of its base class,
+regardless of the package in which it’s defined. A derived class in a separate package can’t access protected members of its base class using reference
+variables.
+-------------------------------------
+
+
+private members are not accessible outside the class in whichthey’re defined. private members are accessible only to the classes and interfaces inwhich they’re defined
