@@ -58,4 +58,7 @@ private members are not accessible outside the class in whichthey’re defined. 
 -------------------------------
 
 https://stackoverflow.com/questions/56610005/angular-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed
+
+
+https://stackoverflow.com/questions/54804123/angular-7-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-fail
 ----------------------
