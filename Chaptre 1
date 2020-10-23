@@ -64,4 +64,31 @@ https://stackoverflow.com/questions/54804123/angular-7-fatal-error-ineffective-m
 
 
 http://cssstars.com/javascript-heap-out-of-memory/
+
+
+
+
+
+
+
+Chouf hedhi ----------->
+
+You can add the above code in the package.json file
+
+"scripts": {
+    "ng-high-memory": "node --max_old_space_size=4000 ./node_modules/@angular/cli/bin/ng",
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+
+
+
+
+
+
+
 ----------------------
