@@ -44,3 +44,18 @@ variables.
 
 
 private members are not accessible outside the class in whichthey’re defined. private members are accessible only to the classes and interfaces inwhich they’re defined
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------
+
+https://stackoverflow.com/questions/56610005/angular-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed
+----------------------
