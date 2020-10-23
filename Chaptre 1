@@ -48,65 +48,22 @@ private members are not accessible outside the class in whichthey’re defined. 
 
 
 
+1 - If you add the keyword abstract to the definition of a class, it can’tbe instantiated. 
+
+2 - An abstract class may or may not define an abstract method.But a concrete class can’t define an abstract method.
+
+3- An interface is an abstract entity by default. 
+
+4 - An abstract  method  doesn’t  have  a  body.  ( just signature and return type)
+
+5 - None of the different types of variables (instance, static, local, and method parame-ters) can be defined as abstract.
+
+6 - A class that’s marked final can’t be extended by another class.
+
+7- An interface can’t be marked as final. 
+
+8 - A final variable can’t be reassigned a value. It can be assigned a value only once.
+
+9 - A final method defined in a base class can’t be overridden by a derived class. 
 
 
-
-
-
-
-
--------------------------------
-
-https://stackoverflow.com/questions/56610005/angular-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed
-
-
-https://stackoverflow.com/questions/54804123/angular-7-fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-fail
-
-
-http://cssstars.com/javascript-heap-out-of-memory/
-
-
-
-
-
-
-
-Chouf hedhi ----------->
-
-You can add the above code in the package.json file
-
-"scripts": {
-    "ng-high-memory": "node --max_old_space_size=4000 ./node_modules/@angular/cli/bin/ng",
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-
-
-
-
-https://phoenixnap.com/kb/update-node-js-version
-
-
-
-
-
-https://stackoverflow.com/questions/59284265/npm-err-verification-failed-while-extracting-agm-core1-0-0-beta-3
-
-
-
-
-
-https://stackoverflow.com/questions/47545940/when-i-run-npm-install-it-returns-with-err-code-eintegrity-npm-5-3-0
-
-
-
-
-
-
-https://stackoverflow.com/questions/46987440/why-is-npm-throwing-the-error-checksum-failed-while-installing-angular-cli
-
-----------------------
