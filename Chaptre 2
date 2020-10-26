@@ -7,3 +7,5 @@ long
 float
 double
 boolean
+
+---------> The char primitive data type is an unsigned numeric datatype.  It  can  only  store  positive  integers
